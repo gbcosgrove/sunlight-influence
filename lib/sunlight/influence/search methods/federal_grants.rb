@@ -1,1 +1,3 @@
-federal_grants.rb
+require 'sunlight/influence'
+
+class Sunlight::Influence::

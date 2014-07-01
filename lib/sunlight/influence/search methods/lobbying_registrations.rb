@@ -1,1 +1,3 @@
-lobbying_registrations.rb
+require 'sunlight/influence'
+
+class Sunlight::Influence::
