@@ -54,4 +54,31 @@ class Sunlight::Influence::CampaignContributions
     self.committee_party                  = attrs[:committee_party]
   end
 
+  ## Finish this method
+  def self.retrieve_campaign_contributions(state)
+    state_t = self.state_transform(state)
+
+  end
+
+  def self.state_transform(state)
+    if state.size == 2
+      state_search, state_param = "state", state.upcase
+    else
+      state_search, state_param = "state_name", state.capitalize
+    end
+  end
+
+  ## Must take state method into account
+
+  # def self.by_state(state)
+  #   if state.size == 2
+  #     state_search, state_param = "state", state.upcase
+  #   else
+  #     state_search, state_param = "state_name", state.capitalize
+  #   end
+
+  #   uri = URI("#{Sunlight::Congress::BASE_URI}/legislators?#{state_search}=#{state_param}&apikey=#{Sunlight::Congress.api_key}")
+  #   JSON.load(Net::HTTP.get(uri))["results"].collect{|json| new(json) }
+  # end
+
 end
