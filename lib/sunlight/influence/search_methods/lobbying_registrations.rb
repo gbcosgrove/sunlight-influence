@@ -1,5 +1,5 @@
 class Sunlight::Influence::LobbyingRegistrations
-  attr_reader :registrant_name] :filing_type, :client_category, :client_name, :agencies, :transaction_type,
+  attr_reader :registrant_name, :filing_type, :client_category, :client_name, :agencies, :transaction_type,
               :client_parent_name, :amount, :transaction_id, :lobbyists, :year, :transaction_type_desc,
               :registrant_is_firm, :issues
 
