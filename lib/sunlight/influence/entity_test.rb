@@ -1,8 +1,12 @@
-require_relative 'call_constructor_module.rb'
-
 class Sunlight::Influence::EntityTest < OpenStruct
   attr_accessor :result
   extend CallConstructor
+
+  def self.search(name)
+    foo = search_format(name)
+    bar = uri_builder(foo, type)
+    sunlight_call(bar)
+  end
 
   def self.find_politician(name)
     type = "politician"

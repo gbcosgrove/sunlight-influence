@@ -13,7 +13,7 @@ module CallConstructor
     end
   end
 
-  def uri_builder(search, type)
+  def uri_builder(search)
     URI("#{Sunlight::Influence::BASE_URI}/entities.json?search=#{search}&type=#{type}&apikey=#{Sunlight::Influence.api_key}")
   end
 end
