@@ -1,5 +1,3 @@
-require 'sunlight/influence'
-
 class Sunlight::Influence::EntityOverview
     attr_reader :name, :totals, :year, :faca_committee_count, :faca_member_count, :regs_submitted_docket_count,
                 :earmark_count, :regs_docket_count, :recipient_amount, :fec_summary_count, :independent_expenditure_amount, :non_firm_spending,

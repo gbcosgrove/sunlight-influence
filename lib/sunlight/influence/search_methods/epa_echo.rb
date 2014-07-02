@@ -1,5 +1,3 @@
-# require 'sunlight/influence'
-
 class Sunlight::Influence::EpaEcho
   attr_reader :penalty_enfotpa, :penalty_enfccaa, :penalty_enfcslp, :first_date, :num_defendants, :case_name,
               :penalty, :last_date, :penalty_enfops, :first_date_significance, :penalty_enfotsa, :location_addresses,

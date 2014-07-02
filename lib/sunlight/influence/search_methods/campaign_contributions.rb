@@ -1,5 +1,3 @@
-# require 'sunlight/influence'
-
 class Sunlight::Influence::CampaignContributions
   attr_reader :seat, :committee_ext_id, :seat_held, :recipient_party, :transaction_type_description, :recipient_type,
               :seat_status, :recipient_state, :contributor_category, :contributor_gender, :contributor_state,

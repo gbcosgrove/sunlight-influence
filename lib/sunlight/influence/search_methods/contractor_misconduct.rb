@@ -1,5 +1,3 @@
-# require 'sunlight/influence'
-
 class Sunlight::Influence::ContractorMisconduct
   attr_reader :dispostion, :penalty_amount, :date_year, :date_significance, :enforcement_agency, :contractor,
               :instance, :synopsis, :url, :contracting_party, :date, :misconduct_type, :court_type

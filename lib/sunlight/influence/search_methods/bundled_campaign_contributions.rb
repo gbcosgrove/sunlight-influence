@@ -1,5 +1,3 @@
-# require 'sunlight/influence'
-
 class Sunlight::Influence::BundledCampaignContributions
   attr_reader :bundler_name, :report_type, :semi_annual_amount, :standardized_firm_name, :state, :street_addr2, :street_addr1,
               :zip_code, :end_date, :city, :committee_name, :committee_fec_id, :standardized_lobbyist_name, :report_year,

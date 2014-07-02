@@ -1,7 +1,5 @@
-# require 'sunlight/influence'
-
 class Sunlight::Influence::Politician
-  attr_reader :count, :name, :state, :seat, :amount, :party, :id
+  attr_reader :count, :name, :state, :seat, :amount, :party, :id,
 
   def initialize(attrs)
     self.count  = attrs[:count]

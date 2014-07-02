@@ -1,5 +1,3 @@
-# require 'sunlight/influence'
-
 class Sunlight::Influence::FacaMemberships
   attr_reader :committee_url, :member_firstlast, :agency_abbr, :end_date, :pay_plan, :represented_group, :appointment_term,
               :member_designation, :org_id, :appointment_type, :affiliation, :agency_name, :member_name,

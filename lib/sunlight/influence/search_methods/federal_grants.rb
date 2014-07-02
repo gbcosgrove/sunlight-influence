@@ -1,5 +1,3 @@
-# require 'sunlight/influence'
-
 class Sunlight::Influence::FederalGrant < OpenStruct
   attr_reader :progsrc, :principal_place_state, :non_fed_funding_amount, :rec_flag, :recipient_zip, :fiscal_year,
               :progsrc_subacnt_code, :record_type, :cfda_program_num, :ending_date, :recipient_type,

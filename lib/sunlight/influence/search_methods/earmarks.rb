@@ -1,5 +1,3 @@
-# require 'sunlight/influence'
-
 class Sunlight::Influence::Earmarks
   attr_reader :description, :recipients, :notes, :bill, :undisclosed, :locations, :fiscal_year, :omni_amount, :house_amount,
               :senate_amount, :bill_subsection, :members, :bill_section, :final_amount, :presidential, :budget_amount

@@ -1,6 +1,3 @@
-# require 'sunlight/influence'
-require 'ostruct'
-
 class Sunlight::Influence::EntityTest < OpenStruct
   attr_accessor :result
 

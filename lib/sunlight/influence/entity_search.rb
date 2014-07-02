@@ -1,5 +1,3 @@
-# require_relative 'sunlight/influence.rb'
-
 class Sunlight::Influence::Entity < OpenStruct
   attr_reader :name, :count_given, :firm_income, :count_lobbied, :seat, :total_received, :state,
                 :lobbying_firm, :count_received, :party, :total_given, :type, :id, :non_firm_spending,
