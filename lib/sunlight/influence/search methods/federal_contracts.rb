@@ -1,4 +1,4 @@
-require 'sunlight/influence'
+# require 'sunlight/influence'
 
 class Sunlight::Influence::FederalContracts
   attr_reader :contractingofficeid, :srdvobflag, :reasonnotcompeted, :seatransportation, :hubzoneflag, :contractbundling,

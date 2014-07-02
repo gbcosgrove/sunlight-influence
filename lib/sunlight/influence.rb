@@ -4,7 +4,7 @@ require 'ostruct'
 
 module Sunlight
   module Influence
-    BASE_URI = "http://transparencydata.com/api/1.0/"
+    BASE_URI = "http://transparencydata.com/api/1.0"
 
     def self.api_key
       @api_key

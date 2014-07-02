@@ -1,4 +1,4 @@
-require 'sunlight/influence'
+# require 'sunlight/influence'
 
 class Sunlight::Influence::BundledCampaignContributions
   attr_reader :bundler_name, :report_type, :semi_annual_amount, :standardized_firm_name, :state, :street_addr2, :street_addr1,

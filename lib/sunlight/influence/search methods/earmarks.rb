@@ -1,4 +1,4 @@
-require 'sunlight/influence'
+# require 'sunlight/influence'
 
 class Sunlight::Influence::Earmarks
   attr_reader :description, :recipients, :notes, :bill, :undisclosed, :locations, :fiscal_year, :omni_amount, :house_amount,

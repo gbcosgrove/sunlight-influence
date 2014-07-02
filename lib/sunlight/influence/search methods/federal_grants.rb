@@ -1,6 +1,6 @@
-require 'sunlight/influence'
+# require 'sunlight/influence'
 
-class Sunlight::Influence::FederalGrant
+class Sunlight::Influence::FederalGrant < OpenStruct
   attr_reader :progsrc, :principal_place_state, :non_fed_funding_amount, :rec_flag, :recipient_zip, :fiscal_year,
               :progsrc_subacnt_code, :record_type, :cfda_program_num, :ending_date, :recipient_type,
               :transaction_status, :principal_place_cc, :face_loan_guarn, :principal_place_cd, :total_funding_amount,
@@ -12,6 +12,12 @@ class Sunlight::Influence::FederalGrant
               :recipient_city_name, :federal_award_id, :fed_funding_amount, :recipient_state_code, :unique_transaction_id,
               :agency_name, :principal_place_zip, :fyq_correction, :action_type, :correction_late_ind,
               :asst_cat_type
+
+  def initialize(attrs)
+    attrs.each do |k,v|
+      self.result = OpenStruct.new(k[v])
+    end
+  end
 
   def initialize(attrs)
     self.progsrc                    = [:progsrc]
