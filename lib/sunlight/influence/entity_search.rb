@@ -1,4 +1,4 @@
-class Sunlight::Influence::EntityTest < OpenStruct
+class Sunlight::Influence::EntitySearch < OpenStruct
   extend CallConstructor
 
   def self.search(name)
