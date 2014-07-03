@@ -3,7 +3,6 @@ require_relative 'call_constructor_module.rb'
 class Sunlight::Influence::Individual < OpenStruct
   extend CallConstructor
 
-  main = "aggregates/indiv/"
 
   def self.ind_id_lookup(name)
     entity = Sunlight::Influence::EntitySearch.find_individual(name)
