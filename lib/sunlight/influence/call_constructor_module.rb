@@ -13,7 +13,13 @@ module CallConstructor
     end
   end
 
-  def uri_builder(search)
-    URI("#{Sunlight::Influence::BASE_URI}/entities.json?search=#{search}&type=#{type}&apikey=#{Sunlight::Influence.api_key}")
+  def uri_builder(args)
+    # URI("#{Sunlight::Influence::BASE_URI}/entities.json?search=#{search}&type=#{type}&apikey=#{Sunlight::Influence.api_key}")
+    base = args[:base]
+    category = args[:category]
+    parameters = args[:parameters]
+    type = args[:type]
+    api_key = args[:api_key]
+    URI("#{base}/#{category}.#{format}?search=#{parameters}#{type}#{api_key}")
   end
 end

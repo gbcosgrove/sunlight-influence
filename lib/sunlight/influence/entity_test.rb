@@ -4,7 +4,7 @@ class Sunlight::Influence::EntityTest < OpenStruct
 
   def self.search(name)
     foo = search_format(name)
-    bar = uri_builder(foo, type)
+    bar = uri_builder(foo)
     sunlight_call(bar)
   end
 
