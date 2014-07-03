@@ -1,6 +1,6 @@
 module APIResources
 
-  BASE_URI = "http://transparencydata.com/api/1.0"
+
   ## Formats
   json = "json"
 
