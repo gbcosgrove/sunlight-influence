@@ -1,4 +1,4 @@
-class Sunlight::Influence::ItemizedSeach
+class Sunlight::Influence::ItemizedSearch
   extend CallConstructor
 
   def self.campaign_contributions
