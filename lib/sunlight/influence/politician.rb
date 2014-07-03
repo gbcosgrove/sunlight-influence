@@ -1,11 +1,14 @@
+require_relative 'call_constructor_module.rb'
+
 class Sunlight::Influence::Politician < OpenStruct
   extend CallConstructor
 
-  main = "aggregates/pol/#{entity_id}/contributors"
+  main = "aggregates/pol//contributors"
 
   def self.pol_id_lookup(name)
-    entity = EntitySearch.find_politician(name)
+    entity = Sunlight::Influence::EntitySearch.find_politician(name)
     entity_id = entity[:entity_id]
+    puts entity_id
   end
 
   def self.top_politicians_by_contributions_received

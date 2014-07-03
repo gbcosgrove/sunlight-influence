@@ -1,48 +1,52 @@
 class Sunlight::Influence::EntitySearch < OpenStruct
   extend CallConstructor
 
+  def self.id_lookup(name)
+    entity = self.search(name).first
+    entity["id"]
+  end
+
   def self.search(name)
-    category = "entities"
-    foo = search_format(name)
+    name = search_format(name)
+    foo = { category: "entities", search: "search=#{name}" }
     bar = uri_builder(foo)
     sunlight_call(bar)
   end
 
   def self.find_politician(name)
-    category = "entities"
-    type = "politician"
-    foo = search_format(name)
-    bar = uri_builder(foo, type)
+    name = search_format(name)
+    foo = { category: "entities", type: "type=politican", search: "search=#{name}" }
+    bar = uri_builder(foo)
     sunlight_call(bar)
   end
 
   def self.find_individual(name)
-    category = "entities"
-    type = "individual"
-    foo = search_format(name)
-    bar = uri_builder(foo, type)
+    name = search_format(name)
+    foo = { category: "entities", type: "type=individual", search: "search=#{name}" }
+    bar = uri_builder(foo)
     sunlight_call(bar)
   end
 
   def self.find_organization(name)
-    category = "entities"
-    type = "organization"
-    foo = search_format(name)
-    bar = uri_builder(foo, type)
+    name = search_format(name)
+    foo = { category: "entities", type: "type=organization", search: "search=#{name}" }
+    bar = uri_builder(foo)
     sunlight_call(bar)
   end
 
   def self.find_industry(name)
-    category = "entities"
-    type = "industry"
-    foo = search_format(name)
-    bar = uri_builder(foo, type)
+    name = search_format(name)
+    foo = { category: "entities", type: "type=industry", search: "search=#{name}" }
+    bar = uri_builder(foo)
     sunlight_call(bar)
   end
 
-  def self.retrieve_overview(entity_id, cycle)
-    uri = URI("#{Sunlight::Influence::BASE_URI}/entities/#{entity_id}.json?cycle=#{cycle}&apikey=#{Sunlight::Influence.api_key}")
-    JSON.load(Net:HTTP.get(uri))["results"].collect{|json| new(json)}
+  def self.retrieve_overview(args)
+    entity_id = self.id_lookup(args[:name])
+    foo = { category: "entities/", entity_id: "#{entity_id}" }
+    bar = uri_builder(foo)
+    sunlight_call(bar)
   end
+
 
 end

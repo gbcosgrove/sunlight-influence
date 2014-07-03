@@ -1,4 +1,9 @@
+require_relative 'call_constructor_module.rb'
+require_relative ''
+
+
 module CallConstructor
+
 
   def search_format(foo)
     if foo.match(" ")
@@ -9,18 +14,15 @@ module CallConstructor
   end
 
   def string_constructor(args)
-   "#{type}#{entity_id}#{category}#{format}?#{search}"
+    puts "#{args[:type]}#{args[:entity_id]}#{arg[:category]}#{args[:format]}?#{args[:search]}"
   end
 
   def uri_builder(args)
-    # URI("#{Sunlight::Influence::BASE_URI}/entities.json?search=#{search}&type=#{type}&apikey=#{Sunlight::Influence.api_key}")
-
-    URI("#{base}/#{category}#{entity_id}.json?#{search}#{api_key}")
-    # URI("#{base}/#{category}#{entity_id}.json?#{search}#{api_key}")
+    api_key = Sunlight::Influence.api_key
+    URI("#{Sunlight::Influence::BASE_URI}/#{args[:category]}#{args[:entity_id]}.json?#{args[:search]}&apikey=#{api_key}")
   end
 
    def sunlight_call(api_call)
-     result = JSON.load(Net::HTTP.get(api_call))
-     result.first
+    result = JSON.load(Net::HTTP.get(api_call))
   end
 end

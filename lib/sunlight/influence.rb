@@ -2,12 +2,11 @@ require 'net/http'
 require 'json'
 require 'ostruct'
 require_relative 'influence/call_constructor_module.rb'
-require_relative 'influence/api_resources.rb'
 
 module Sunlight
   module Influence
 
-    BASE_URI = "http://transparencydata.com/api/1.0/"
+    BASE_URI = "http://transparencydata.com/api/1.0"
 
 
 

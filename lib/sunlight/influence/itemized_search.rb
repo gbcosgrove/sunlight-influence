@@ -1,3 +1,5 @@
+require_relative 'call_constructor_module.rb'
+
 class Sunlight::Influence::ItemizedSearch < OpenStruct
   extend CallConstructor
 
