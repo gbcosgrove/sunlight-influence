@@ -1,5 +1,9 @@
 module CallConstructor
 
+  search = "search="
+  cycle = "cycle="
+  type = "type="
+
   def sunlight_call(api_call)
      result = JSON.load(Net::HTTP.get(api_call))
      result.first

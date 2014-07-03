@@ -1,3 +1,5 @@
-class Sunlight::Influence::InfluenceQuery
+class Sunlight::Influence::ItemizedSeach
+  extend CallConstructor
+
 
 end
