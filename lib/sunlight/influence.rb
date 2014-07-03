@@ -7,7 +7,7 @@ require_relative 'influence/api_resources.rb'
 module Sunlight
   module Influence
 
-    BASE_URI = "http://transparencydata.com/api/1.0"
+    BASE_URI = "http://transparencydata.com/api/1.0/"
 
 
 

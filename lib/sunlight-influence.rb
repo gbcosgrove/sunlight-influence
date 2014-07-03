@@ -5,6 +5,6 @@ require_relative "sunlight/influence/industry.rb"
 require_relative "sunlight/influence/organization.rb"
 require_relative "sunlight/influence/entity_overview.rb"
 require_relative "sunlight/influence/politician.rb"
-require_relative "sunlight/influence/search_methods.rb"
+require_relative "sunlight/influence/itemized_search.rb"
 require_relative "sunlight/influence/call_constructor_module.rb"
 

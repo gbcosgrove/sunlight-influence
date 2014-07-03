@@ -1,4 +1,4 @@
-class Sunlight::Influence::Industry
+class Sunlight::Influence::Industry < OpenStruct
   extend CallConstructor
 
   def self.top_industries

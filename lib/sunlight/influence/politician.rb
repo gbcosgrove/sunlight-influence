@@ -1,4 +1,4 @@
-class Sunlight::Influence::Politician
+class Sunlight::Influence::Politician < OpenStruct
   extend CallConstructor
 
   def self.top_politicians_by_contributions_received

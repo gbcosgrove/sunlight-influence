@@ -1,4 +1,4 @@
-class Sunlight::Influence::Organization
+class Sunlight::Influence::Organization < OpenStruct
   extend CallConstructor
 
   def self.top_organizations_by_contributions_given
