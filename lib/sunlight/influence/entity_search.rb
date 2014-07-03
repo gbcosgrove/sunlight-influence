@@ -1,48 +1,40 @@
 class Sunlight::Influence::EntitySearch < OpenStruct
   extend CallConstructor
 
-  def self.id_lookup(name)
-    entity = self.search(name).first
+  def self.id_lookup(args)
+    entity = self.search(args).first
     entity["id"]
   end
 
-  def self.search(name)
-    name = search_format(name)
-    foo = { category: "entities", search: "search=#{name}" }
+  def self.search(args)
+    parameters = string_constructor(args)
+    foo = { category: "entities", parameters: "#{parameters}" }
     bar = uri_builder(foo)
     sunlight_call(bar)
   end
 
-  def self.find_politician(name)
-    name = search_format(name)
-    foo = { category: "entities", type: "type=politican", search: "search=#{name}" }
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+  def self.find_politician(args)
+    args[:type] = "politician"
+    self.search(args)
   end
 
-  def self.find_individual(name)
-    name = search_format(name)
-    foo = { category: "entities", type: "type=individual", search: "search=#{name}" }
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+  def self.find_individual(args)
+    args[:type] = "individual"
+    self.search(args)
   end
 
-  def self.find_organization(name)
-    name = search_format(name)
-    foo = { category: "entities", type: "type=organization", search: "search=#{name}" }
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+  def self.find_organization(args)
+    args[:type] = "organization"
+    self.search(args)
   end
 
-  def self.find_industry(name)
-    name = search_format(name)
-    foo = { category: "entities", type: "type=industry", search: "search=#{name}" }
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+  def self.find_industry(args)
+    args[:type] = "industry"
+    self.search(args)
   end
 
   def self.retrieve_overview(args)
-    entity_id = self.id_lookup(args[:name])
+    entity_id = self.id_lookup(args)
     foo = { category: "entities/", entity_id: "#{entity_id}" }
     bar = uri_builder(foo)
     sunlight_call(bar)
