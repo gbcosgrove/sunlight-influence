@@ -1,5 +1,9 @@
 ### JSON Paths
 
+### URL Encoding
+%3C%7C - <
+%3E%7C - >
+
 ####Entity Lookups
 
 *Search by Name - /entities.json
