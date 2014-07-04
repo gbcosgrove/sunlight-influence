@@ -4,68 +4,101 @@ class Sunlight::Influence::ItemizedSearch < OpenStruct
   extend CallConstructor
 
 
+## Parameters: :format, :page, :per_page, :amount, :contributor_ft, :contributor_state, :cycle, :date,
+## Parameters: :for_against. :organization_ft, :recipient_ft, :recipient_state, :seat, :transaction_namespace
 
-  def self.campaign_contributions
-    category = "contributions"
-    foo = search_format(name)
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+  def self.itemized_search_call(options)
+
   end
 
-  def self.bundled_campaign_contributions
-    category
-    foo = search_format(name)
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+  def self.campaign_contributions(options)
+    if !options.empty?
+      options[:parameters] = string_constructor(options)
+    end
+    options[:category] = "contributions"
+    options = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(options)
+    sunlight_call(call)
   end
 
-  def self.contractor_misconduct
-    category
-    foo = search_format(name)
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+  def self.bundled_campaign_contributions(options)
+    if !options.empty?
+      options[:parameters] = string_constructor(options)
+    end
+    options[:category] = "contributions/bundled"
+    options = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(options)
+    sunlight_call(call)
   end
 
-  def self.earmarks
-    category
-    foo = search_format(name)
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+  def self.contractor_misconduct(options)
+    if !options.empty?
+      options[:parameters] = string_constructor(options)
+    end
+    options[:category] = "misconduct"
+    options = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(options)
+    sunlight_call(call)
   end
 
-  def self.epa_echo
-    category
-    foo = search_format(name)
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+  def self.earmarks(options)
+    if !options.empty?
+      options[:parameters] = string_constructor(options)
+    end
+    options[:category] = "earmarks"
+    options = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(options)
+    sunlight_call(call)
   end
 
-  def self.faca_memberships
-    category
-    foo = search_format(name)
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+  def self.epa_echo(options)
+    if !options.empty?
+      options[:parameters] = string_constructor(options)
+    end
+    options[:category] = "epa"
+    options = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(options)
+    sunlight_call(call)
   end
 
-  def self.federal_contracts
-    category
-    foo = search_format(name)
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+  def self.faca_memberships(options)
+    if !options.empty?
+      options[:parameters] = string_constructor(options)
+    end
+    options[:category] = "faca"
+    options = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(options)
+    sunlight_call(call)
   end
 
-  def self.federal_grants
-    category
-    foo = search_format(name)
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+  def self.federal_contracts(options)
+    if !options.empty?
+      options[:parameters] = string_constructor(options)
+    end
+    options[:category] = "contracts"
+    options = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(options)
+    sunlight_call(call)
   end
 
-  def self.lobbying_registrations
-    category
-    foo = search_format(name)
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+  def self.federal_grants(options)
+    if !options.empty?
+      options[:parameters] = string_constructor(options)
+    end
+    options[:category] = "grants"
+    options = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(options)
+    sunlight_call(call)
+  end
+
+  def self.lobbying_registrations(options)
+    if !options.empty?
+      options[:parameters] = string_constructor(options)
+    end
+    options[:category] = "lobbying"
+    options = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(options)
+    sunlight_call(call)
   end
 
 end
