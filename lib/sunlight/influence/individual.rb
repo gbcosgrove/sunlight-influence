@@ -18,47 +18,57 @@ class Sunlight::Influence::Individual < OpenStruct
   end
 
   def self.top_recipient_organizations(options)
-    entity_id = self.ind_id_lookup(options[:name])
+    entity_id = self.ind_id_lookup(search: options[:name])
     options[:parameters] = string_constructor(cycle: options[:cycle], limit: options[:limit])
-    options[:category] = "aggregate/#{entity_id}/recipient_orgs"
+    options[:category] = "aggregates/indiv/#{entity_id}/recipient_orgs"
     args = {category: options[:category], parameters: options[:parameters]}
     call = uri_builder(args)
     sunlight_call(call)
   end
 
   def self.top_recipient_politicians(options)
-    self.ind_id_lookup(arg[:name])
-    category = "#{main}/recipient_pols"
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+    entity_id = self.ind_id_lookup(search: options[:name])
+    options[:parameters] = string_constructor(cycle: options[:cycle], limit: options[:limit])
+    options[:category] = "aggregates/indiv/#{entity_id}/recipient_pols"
+    args = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(args)
+    sunlight_call(call)
   end
 
   def self.party_breakdown(options)
-    self.ind_id_lookup(arg[:name])
-    category = "#{main}/recipients/party_breakdown"
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+    entity_id = self.ind_id_lookup(search: options[:name])
+    options[:parameters] = string_constructor(cycle: options[:cycle])
+    options[:category] = "aggregates/indiv/#{entity_id}/recipients/party_breakdown"
+    args = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(args)
+    sunlight_call(call)
   end
 
   def self.lobbying_registrants(options)
-    self.ind_id_lookup(arg[:name])
-    category = "#{main}/registrants"
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+    entity_id = self.ind_id_lookup(search: options[:name])
+    options[:parameters] = string_constructor(cycle: options[:cycle], limit: options[:limit])
+    options[:category] = "aggregates/indiv/#{entity_id}/registrants"
+    args = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(args)
+    sunlight_call(call)
   end
 
   def self.lobbying_clients(options)
-    self.ind_id_lookup(arg[:name])
-    category = "#{main}/clients"
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+    entity_id = self.ind_id_lookup(search: options[:name])
+    options[:parameters] = string_constructor(cycle: options[:cycle], limit: options[:limit])
+    options[:category] = "aggregates/indiv/#{entity_id}/party_breakdown"
+    args = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(args)
+    sunlight_call(call)
   end
 
   def self.lobbying_issues(options)
-    self.ind_id_lookup(arg[:name])
-    category = "#{main}/clients"
-    bar = uri_builder(foo)
-    sunlight_call(bar)
+    entity_id = self.ind_id_lookup(name: options[:name])
+    options[:parameters] = string_constructor(cycle: options[:cycle], limit: options[:limit])
+    options[:category] = "aggregates/indiv/#{entity_id}/issues"
+    args = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(args)
+    sunlight_call(call)
   end
 
 end
