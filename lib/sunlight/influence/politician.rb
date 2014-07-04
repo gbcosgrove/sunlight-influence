@@ -17,10 +17,6 @@ class Sunlight::Influence::Politician < OpenStruct
     options = {category: options[:category], parameters: options[:parameters]}
     bar = uri_builder(options)
     sunlight_call(bar)
-    # category = "/aggregates/pols/top_"
-    # foo = search_format(name)
-    # bar = uri_builder(foo)
-    # sunlight_call(bar)
   end
 
   #entity_id
@@ -35,10 +31,6 @@ class Sunlight::Influence::Politician < OpenStruct
     args = {category: options[:category], parameters: options[:parameters]}
     call = uri_builder(args)
     sunlight_call(call)
-    # self.pol_id_lookup(options[:name])
-    # category = "/#{main}"
-    # bar = uri_builder(foo)
-    # sunlight_call(bar)
   end
 
   #entity_id
@@ -53,10 +45,6 @@ class Sunlight::Influence::Politician < OpenStruct
     args = {category: options[:category], parameters: options[:parameters]}
     call = uri_builder(args)
     sunlight_call(call)
-    # self.pol_id_lookup(options[:name])
-    # category = "/#{main}/industries"
-    # bar = uri_builder(foo)
-    # sunlight_call(bar)
   end
 
   #entity_id
@@ -71,10 +59,6 @@ class Sunlight::Influence::Politician < OpenStruct
     args = {category: options[:category], parameters: options[:parameters]}
     call = uri_builder(args)
     sunlight_call(call)
-    # self.pol_id_lookup(options[:name])
-    # category = "/#{main}/industries_unknown"
-    # bar = uri_builder(foo)
-    # sunlight_call(bar)
   end
 
   #entity_id
@@ -89,10 +73,6 @@ class Sunlight::Influence::Politician < OpenStruct
     args = {category: options[:category], parameters: options[:parameters]}
     call = uri_builder(args)
     sunlight_call(call)
-    # self.pol_id_lookup(options[:name])
-    # category = "/#{main}/sectors"
-    # bar = uri_builder(foo)
-    # sunlight_call(bar)
   end
 
   #entity_id
@@ -107,10 +87,6 @@ class Sunlight::Influence::Politician < OpenStruct
     args = {category: options[:category], parameters: options[:parameters]}
     call = uri_builder(args)
     sunlight_call(call)
-    # self.pol_id_lookup(options[:name])
-    # category = "/#{main}/local_breakdown"
-    # bar = uri_builder(foo)
-    # sunlight_call(bar)
   end
 
   #entity_id
@@ -125,10 +101,6 @@ class Sunlight::Influence::Politician < OpenStruct
     args = {category: options[:category], parameters: options[:parameters]}
     call = uri_builder(args)
     sunlight_call(call)
-    # self.pol_id_lookup(options[:name])
-    # category = "/#{main}/type_breakdown"
-    # bar = uri_builder(foo)
-    # sunlight_call(bar)
   end
 
   #entity_id
@@ -139,10 +111,6 @@ class Sunlight::Influence::Politician < OpenStruct
     options[:category] = "aggregates/pol/#{entity_id}/fec_summary"
     call = uri_builder(options)
     sunlight_call(call)
-    # self.pol_id_lookup(options[:name])
-    # category = "/aggregates/pol/#{entity_id}/fec_summary"
-    # bar = uri_builder(foo)
-    # sunlight_call(bar)
   end
 
   #entity_id
@@ -153,11 +121,6 @@ class Sunlight::Influence::Politician < OpenStruct
     options[:category] = "aggregates/pol/#{entity_id}/fec_indexp"
     call = uri_builder(options)
     sunlight_call(call)
-
-    # self.pol_id_lookup(options[:name])
-    # category = "/aggregates/pol/#{entity_id}/fec_indexp"
-    # bar = uri_builder(foo)
-    # sunlight_call(bar)
   end
 
 end
