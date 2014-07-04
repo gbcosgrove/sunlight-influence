@@ -11,6 +11,18 @@ module CallConstructor
     end
   end
 
+  def check_options_hash(options)
+    if !options.empty?
+      options[:parameters] = string_constructor(options)
+    end
+  end
+
+  def call_api(options)
+    options = {category: options[:category], parameters: options[:parameters]}
+    call = uri_builder(options)
+    sunlight_call(call)
+  end
+
   def string_constructor(args)
     collection = []
     args.each do |k, v|
