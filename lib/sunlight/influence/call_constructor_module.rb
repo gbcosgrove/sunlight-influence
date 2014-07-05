@@ -12,6 +12,7 @@ module CallConstructor
   end
 
   def check_options_hash(options)
+    options.delete(:name)
     if !options.empty?
       options[:parameters] = string_constructor(options)
     end
@@ -38,6 +39,6 @@ module CallConstructor
   end
 
    def sunlight_call(api_call)
-    result = JSON.load(Net::HTTP.get(api_call))
+    JSON.load(Net::HTTP.get(api_call))
   end
 end

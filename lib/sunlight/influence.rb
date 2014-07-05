@@ -11,11 +11,11 @@ module Sunlight
 
 
     def self.api_key
-      @api_key = 'b34a371adbb94d988029fec07141ed1d'
+      @api_key = api_key
     end
 
-    # def self.api_key=(api_key)
-    #   @api_key = api_key
-    # end
+    def self.api_key=(api_key)
+      @api_key = api_key
+    end
   end
 end
