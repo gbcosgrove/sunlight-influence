@@ -3,10 +3,6 @@ require_relative 'call_constructor_module.rb'
 class Sunlight::Influence::ItemizedSearch < OpenStruct
   extend CallConstructor
 
-
-## Parameters: :format, :page, :per_page, :amount, :contributor_ft, :contributor_state, :cycle, :date,
-## Parameters: :for_against. :organization_ft, :recipient_ft, :recipient_state, :seat, :transaction_namespace
-
   def self.campaign_contributions(options)
     check_options_hash(options)
     options[:category] = "contributions"
